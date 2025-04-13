@@ -1,0 +1,156 @@
+/* Variables CSS */
+:root {
+    --primary: #3498db;
+    --secondary: #7f8c8d;
+    --success: #2ecc71;
+    --danger: #e74c3c;
+    --warning: #f1c40f;
+    --light: #ecf0f1;
+    --dark: #34495e;
+    --font-family: 'Arial', sans-serif;
+    --border-radius: 8px;
+}
+
+/* Styles spécifiques aux pages d'authentification */
+
+/* Conteneur principal */
+.auth-card {
+    max-width: 400px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: var(--light);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.auth-card h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--dark);
+}
+
+/* Formulaire */
+.auth-card .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.auth-card label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: var(--dark);
+}
+
+.auth-card input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--secondary);
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.auth-card input:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+/* Mot de passe */
+.password-container {
+    position: relative;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: var(--secondary);
+    transition: color 0.3s ease;
+}
+
+.password-toggle:hover {
+    color: var(--primary);
+}
+
+/* Boutons */
+.btn-primary {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--primary);
+    color: white;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9; /* Couleur légèrement plus foncée */
+}
+
+/* Liens */
+.auth-links {
+    margin-top: 1.5rem;
+}
+
+.auth-links a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.auth-links a:hover {
+    text-decoration: underline;
+}
+
+/* Alertes */
+.alert {
+    padding: 0.75rem;
+    margin-bottom: 1.5rem;
+    border-radius: var(--border-radius);
+}
+
+.alert.error {
+    background-color: #f8d7da; /* Rouge clair */
+    color: #721c24; /* Rouge foncé */
+}
+
+/* Validation des champs */
+input[type="text"]:invalid,
+input[type="email"]:invalid,
+input[type="password"]:invalid {
+    border-color: var(--danger);
+}
+
+input[type="text"]:valid:not(:placeholder-shown),
+input[type="email"]:valid:not(:placeholder-shown),
+input[type="password"]:valid:not(:placeholder-shown) {
+    border-color: var(--success);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    
+.auth-card{padding: 1rem;}
+    .auth-card h1 {
+        font-size: 1.5rem;
+    }
+    .auth-card {
+        padding: 1.5rem;
+    }
+
+    .auth-card h1 {
+        font-size: 1.5rem;
+    }
+
+    .auth-card input {
+        font-size: 0.9rem;
+    }
+
+    .btn-primary {
+        font-size: 0.9rem;
+    }
+}
+/* Fin du fichier CSS */
